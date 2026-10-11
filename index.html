@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ShopNest — Little things that make home feel yours.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand" onclick="showPage('home')"><span class="logo">S</span><span>Shop<span>Nest</span></span></div>
+  <div class="header-actions">
+    <button onclick="showPage('saved')" aria-label="Saved">♡ <b id="wishCount">0</b></button>
+    <button onclick="showPage('bag')" aria-label="Bag">🛍 <b id="bagCount">0</b></button>
+  </div>
+</header>
+
+<div class="search-wrap">
+  <input id="search" placeholder="Search products..." oninput="searchProducts(this.value)">
+</div>
+
+<main id="app"></main>
+
+<nav class="bottom-nav">
+  <button data-page="home" onclick="showPage('home')">⌂<small>Home</small></button>
+  <button data-page="explore" onclick="showPage('explore')">▦<small>Explore</small></button>
+  <button data-page="saved" onclick="showPage('saved')">♡<small>Saved</small></button>
+  <button data-page="bag" onclick="showPage('bag')">🛍<small>Bag</small></button>
+  <button data-page="account" onclick="showPage('account')">♙<small>Account</small></button>
+</nav>
+
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
